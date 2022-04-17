@@ -14,7 +14,7 @@ def test_create_log_folder():
     # set the name of the apps log folder to logs
     logdir = os.path.join(root, '../logs')
     # make a directory if it doesn't exist
-    assert os.path.exists(logdir) == True
+    assert os.path.exists(logdir) == False
 
 def test_create_database():
     response = runner.invoke(create_database)
