@@ -1,0 +1,15 @@
+2022-04-17 23:20:53,421 [INFO] werkzeug: 172.24.0.1 - - [17/Apr/2022 23:20:53] "GET / HTTP/1.1" 200 -
+2022-04-17 23:20:53,513 [INFO] werkzeug: 172.24.0.1 - - [17/Apr/2022 23:20:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-04-17 23:21:52,889 [INFO] werkzeug: 172.24.0.1 - - [17/Apr/2022 23:21:52] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-04-17 23:21:52,904 [INFO] werkzeug: 172.24.0.1 - - [17/Apr/2022 23:21:52] "GET /login HTTP/1.1" 200 -
+2022-04-17 23:21:55,798 [INFO] werkzeug: 172.24.0.1 - - [17/Apr/2022 23:21:55] "GET /register HTTP/1.1" 200 -
+2022-04-17 23:22:09,587 [INFO] werkzeug: 172.24.0.1 - - [17/Apr/2022 23:22:09] "[32mPOST /register HTTP/1.1[0m" 302 -
+2022-04-17 23:22:09,596 [INFO] werkzeug: 172.24.0.1 - - [17/Apr/2022 23:22:09] "GET /login HTTP/1.1" 200 -
+2022-04-17 23:22:12,923 [INFO] werkzeug: 172.24.0.1 - - [17/Apr/2022 23:22:12] "GET /login HTTP/1.1" 200 -
+2022-04-17 23:22:27,901 [INFO] werkzeug: 172.24.0.1 - - [17/Apr/2022 23:22:27] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-04-17 23:22:27,922 [INFO] werkzeug: 172.24.0.1 - - [17/Apr/2022 23:22:27] "GET /dashboard HTTP/1.1" 200 -
+2022-04-17 23:22:29,616 [INFO] werkzeug: 172.24.0.1 - - [17/Apr/2022 23:22:29] "GET /users HTTP/1.1" 200 -
+2022-04-17 23:22:29,630 [INFO] werkzeug: 172.24.0.1 - - [17/Apr/2022 23:22:29] "[36mGET /bootstrap/static/icons/bootstrap-icons.svg HTTP/1.1[0m" 304 -
+2022-04-17 23:22:53,595 [INFO] werkzeug: 172.24.0.1 - - [17/Apr/2022 23:22:53] "GET /users HTTP/1.1" 200 -
+2022-04-17 23:22:53,610 [INFO] werkzeug: 172.24.0.1 - - [17/Apr/2022 23:22:53] "[36mGET /bootstrap/static/icons/bootstrap-icons.svg HTTP/1.1[0m" 304 -
+2022-04-17 23:24:09,550 [INFO] werkzeug:  * Detected change in '/home/myuser/tests/click_test.py', reloading
