@@ -76,3 +76,15 @@
 2022-04-19 03:31:23,597 [INFO] werkzeug:  * Detected change in '/home/myuser/app/logging_config/__init__.py', reloading
 2022-04-19 03:31:26,002 [INFO] werkzeug: 172.26.0.1 - - [19/Apr/2022 03:31:26] "GET / HTTP/1.1" 200 -
 2022-04-19 03:31:26,554 [INFO] werkzeug: 172.26.0.1 - - [19/Apr/2022 03:31:26] "GET /about HTTP/1.1" 200 -
+2022-04-19 07:30:47,072 [INFO] werkzeug: 172.28.0.1 - - [19/Apr/2022 07:30:47] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2022-04-19 07:30:47,084 [INFO] werkzeug: 172.28.0.1 - - [19/Apr/2022 07:30:47] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-04-19 07:30:47,084 [INFO] werkzeug: 172.28.0.1 - - [19/Apr/2022 07:30:47] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-04-19 07:30:47,095 [INFO] werkzeug: 172.28.0.1 - - [19/Apr/2022 07:30:47] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-04-19 07:30:47,106 [INFO] werkzeug: 172.28.0.1 - - [19/Apr/2022 07:30:47] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-04-19 07:32:12,961 [INFO] werkzeug:  * Detected change in '/home/myuser/app/__init__.py', reloading
+2022-04-19 07:42:04,087 [INFO] werkzeug: 172.28.0.1 - - [19/Apr/2022 07:42:04] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2022-04-19 07:42:04,098 [INFO] werkzeug: 172.28.0.1 - - [19/Apr/2022 07:42:04] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-04-19 07:42:04,098 [INFO] werkzeug: 172.28.0.1 - - [19/Apr/2022 07:42:04] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-04-19 07:42:04,107 [INFO] werkzeug: 172.28.0.1 - - [19/Apr/2022 07:42:04] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-04-19 07:42:04,117 [INFO] werkzeug: 172.28.0.1 - - [19/Apr/2022 07:42:04] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-04-19 07:43:59,121 [INFO] werkzeug: 172.28.0.1 - - [19/Apr/2022 07:43:59] "GET /dashboard HTTP/1.1" 200 -
