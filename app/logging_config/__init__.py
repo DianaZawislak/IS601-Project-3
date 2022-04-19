@@ -14,7 +14,10 @@ def before_request_logging():
     current_app.logger.info("Before Request")
     log = logging.getLogger("myApp")
     log.info("My App Logger")
-
+    log = logging.getLogger("mydebugs")
+    log.debug("Debug Logger")
+    log = logging.getLogger("myrequests")
+    log.info("Request Logger")
 
 @log_con.after_app_request
 def after_request_logging(response):
@@ -28,6 +31,10 @@ def after_request_logging(response):
 
     log = logging.getLogger("myApp")
     log.info("My App Logger")
+    log = logging.getLogger("mydebugs")
+    log.debug("Debug Logger")
+    log = logging.getLogger("myrequests")
+    log.info("Request Logger")
     return response
 
 
@@ -37,7 +44,12 @@ def configure_logging():
     log = logging.getLogger("myApp")
     log.info("My App Logger")
     log = logging.getLogger("myerrors")
-    log.info("THis broke")
+    log.info("This has broken")
+    log.warning('warning')
+    log = logging.getLogger("mydebugs")
+    log.debug("Debug Logger")
+    log = logging.getLogger("myrequests")
+    log.info("Request Logger")
 
 
 
@@ -71,7 +83,7 @@ LOGGING_CONFIG = {
         },
         'file.handler.myapp': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'standard',
+            'formatter': 'RequestFormatter',
             'filename': 'app/logs/myapp.log',
             'maxBytes': 10000000,
             'backupCount': 5,
@@ -104,6 +116,13 @@ LOGGING_CONFIG = {
             'maxBytes': 10000000,
             'backupCount': 5,
         },
+        'file.handler.debug': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'formatter': 'standard',
+            'filename': 'app/logs/debug.log',
+            'maxBytes': 10000000,
+            'backupCount': 5,
+        },
     },
     'loggers': {
         '': {  # root logger
@@ -133,6 +152,16 @@ LOGGING_CONFIG = {
         },
         'myerrors': {  # if __name__ == '__main__'
             'handlers': ['file.handler.errors'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
+        'mydebugs': {  # if __name__ == '__main__'
+            'handlers': ['file.handler.debug'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
+        'myrequests': {  # if __name__ == '__main__'
+            'handlers': ['file.handler.request'],
             'level': 'DEBUG',
             'propagate': False
         },
