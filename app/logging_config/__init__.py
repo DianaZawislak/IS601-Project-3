@@ -43,13 +43,17 @@ def configure_logging():
     logging.config.dictConfig(LOGGING_CONFIG)
     log = logging.getLogger("myApp")
     log.info("My App Logger")
+    log.debug("Debug Logger")
     log = logging.getLogger("myerrors")
     log.info("This has broken")
+    log.debug("Debug Logger")
     log.warning('warning')
     log = logging.getLogger("mydebugs")
     log.debug("Debug Logger")
+    log.info("My App Logger")
     log = logging.getLogger("myrequests")
     log.info("Request Logger")
+    log.debug("Debug Logger")
 
 
 
