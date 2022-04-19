@@ -458,3 +458,29 @@
 [2022-04-19 03:07:51,571] [86] 172.26.0.1 requested http://localhost/welcomeINFO in __init__: My App Logger
 [2022-04-19 03:07:52,602] [86] 172.26.0.1 requested http://localhost/registerINFO in __init__: My App Logger
 [2022-04-19 03:07:52,613] [86] 172.26.0.1 requested http://localhost/registerINFO in __init__: My App Logger
+[2022-04-19 03:20:34,483] [8] 172.26.0.1 requested http://localhost/INFO in __init__: My App Logger
+[2022-04-19 03:20:34,483] [8] 172.26.0.1 requested http://localhost/DEBUG in __init__: Debug Logger
+[2022-04-19 03:20:34,486] [8] 172.26.0.1 requested http://localhost/INFO in __init__: My App Logger
+[2022-04-19 03:20:34,595] [8] 172.26.0.1 requested http://localhost/INFO in __init__: My App Logger
+[2022-04-19 03:20:36,597] [8] 172.26.0.1 requested http://localhost/INFO in __init__: My App Logger
+[2022-04-19 03:20:36,602] [8] 172.26.0.1 requested http://localhost/INFO in __init__: My App Logger
+[2022-04-19 03:20:37,638] [8] 172.26.0.1 requested http://localhost/aboutINFO in __init__: My App Logger
+[2022-04-19 03:20:37,649] [8] 172.26.0.1 requested http://localhost/aboutINFO in __init__: My App Logger
+[2022-04-19 03:20:38,314] [8] 172.26.0.1 requested http://localhost/welcomeINFO in __init__: My App Logger
+[2022-04-19 03:20:38,325] [8] 172.26.0.1 requested http://localhost/welcomeINFO in __init__: My App Logger
+[2022-04-19 03:21:50,754] [8] 172.26.0.1 requested http://localhost/INFO in __init__: My App Logger
+[2022-04-19 03:21:50,760] [8] 172.26.0.1 requested http://localhost/INFO in __init__: My App Logger
+[2022-04-19 03:28:23,948] [14] 172.26.0.1 requested http://localhost/INFO in __init__: My App Logger
+[2022-04-19 03:28:23,949] [14] 172.26.0.1 requested http://localhost/DEBUG in __init__: Debug Logger
+[2022-04-19 03:28:23,951] [14] 172.26.0.1 requested http://localhost/INFO in __init__: My App Logger
+[2022-04-19 03:28:24,057] [14] 172.26.0.1 requested http://localhost/INFO in __init__: My App Logger
+[2022-04-19 03:28:24,518] [14] 172.26.0.1 requested http://localhost/aboutINFO in __init__: My App Logger
+[2022-04-19 03:28:24,528] [14] 172.26.0.1 requested http://localhost/aboutINFO in __init__: My App Logger
+[2022-04-19 03:28:25,190] [14] 172.26.0.1 requested http://localhost/welcomeINFO in __init__: My App Logger
+[2022-04-19 03:28:25,200] [14] 172.26.0.1 requested http://localhost/welcomeINFO in __init__: My App Logger
+[2022-04-19 03:31:25,890] [22] 172.26.0.1 requested http://localhost/INFO in __init__: My App Logger
+[2022-04-19 03:31:25,891] [22] 172.26.0.1 requested http://localhost/DEBUG in __init__: Debug Logger
+[2022-04-19 03:31:25,894] [22] 172.26.0.1 requested http://localhost/INFO in __init__: My App Logger
+[2022-04-19 03:31:26,001] [22] 172.26.0.1 requested http://localhost/INFO in __init__: My App Logger
+[2022-04-19 03:31:26,542] [22] 172.26.0.1 requested http://localhost/aboutINFO in __init__: My App Logger
+[2022-04-19 03:31:26,553] [22] 172.26.0.1 requested http://localhost/aboutINFO in __init__: My App Logger

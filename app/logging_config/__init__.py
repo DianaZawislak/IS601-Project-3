@@ -54,6 +54,11 @@ def configure_logging():
     log = logging.getLogger("myrequests")
     log.info("Request Logger")
     log.debug("Debug Logger")
+    log = logging.getLogger("dianasApp")
+    log.info("Request Logger")
+    log.debug("Debug Logger")
+    log.warning("WARNING")
+    log.critical("CRITICAL")
 
 
 
@@ -69,7 +74,7 @@ LOGGING_CONFIG = {
             '()': 'app.logging_config.log_formatters.RequestFormatter',
             'format': '[%(asctime)s] [%(process)d] %(remote_addr)s requested %(url)s'
                         '%(levelname)s in %(module)s: %(message)s'
-        }
+        },
     },
     'handlers': {
         'default': {
@@ -127,6 +132,13 @@ LOGGING_CONFIG = {
             'maxBytes': 10000000,
             'backupCount': 5,
         },
+        'file.handler.dianasapp': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'formatter': 'RequestFormatter',
+            'filename': 'app/logs/dianasapp.log',
+            'maxBytes': 10000000,
+            'backupCount': 5,
+        },
     },
     'loggers': {
         '': {  # root logger
@@ -169,6 +181,10 @@ LOGGING_CONFIG = {
             'level': 'DEBUG',
             'propagate': False
         },
-
-    }
+        'dianasApp': {  # if __name__ == '__main__'
+            'handlers': ['file.handler.dianasapp'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
+},
 }
