@@ -8,3 +8,11 @@
 [2022-04-19 03:31:25,893] [22] 172.26.0.1 requested http://localhost/DEBUG in __init__: Debug Logger
 [2022-04-19 03:31:25,893] [22] 172.26.0.1 requested http://localhost/WARNING in __init__: WARNING
 [2022-04-19 03:31:25,893] [22] 172.26.0.1 requested http://localhost/CRITICAL in __init__: CRITICAL
+[2022-04-19 07:30:46,935] [12] 172.28.0.1 requested http://localhost/dashboardINFO in __init__: Request Logger
+[2022-04-19 07:30:46,936] [12] 172.28.0.1 requested http://localhost/dashboardDEBUG in __init__: Debug Logger
+[2022-04-19 07:30:46,936] [12] 172.28.0.1 requested http://localhost/dashboardWARNING in __init__: WARNING
+[2022-04-19 07:30:46,936] [12] 172.28.0.1 requested http://localhost/dashboardCRITICAL in __init__: CRITICAL
+[2022-04-19 07:42:03,949] [44] 172.28.0.1 requested http://localhost/dashboardINFO in __init__: Request Logger
+[2022-04-19 07:42:03,949] [44] 172.28.0.1 requested http://localhost/dashboardDEBUG in __init__: Debug Logger
+[2022-04-19 07:42:03,949] [44] 172.28.0.1 requested http://localhost/dashboardWARNING in __init__: WARNING
+[2022-04-19 07:42:03,949] [44] 172.28.0.1 requested http://localhost/dashboardCRITICAL in __init__: CRITICAL

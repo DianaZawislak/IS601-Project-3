@@ -484,3 +484,11 @@
 [2022-04-19 03:31:26,001] [22] 172.26.0.1 requested http://localhost/INFO in __init__: My App Logger
 [2022-04-19 03:31:26,542] [22] 172.26.0.1 requested http://localhost/aboutINFO in __init__: My App Logger
 [2022-04-19 03:31:26,553] [22] 172.26.0.1 requested http://localhost/aboutINFO in __init__: My App Logger
+[2022-04-19 07:30:46,933] [12] 172.28.0.1 requested http://localhost/dashboardINFO in __init__: My App Logger
+[2022-04-19 07:30:46,934] [12] 172.28.0.1 requested http://localhost/dashboardDEBUG in __init__: Debug Logger
+[2022-04-19 07:30:46,937] [12] 172.28.0.1 requested http://localhost/dashboardINFO in __init__: My App Logger
+[2022-04-19 07:42:03,946] [44] 172.28.0.1 requested http://localhost/dashboardINFO in __init__: My App Logger
+[2022-04-19 07:42:03,947] [44] 172.28.0.1 requested http://localhost/dashboardDEBUG in __init__: Debug Logger
+[2022-04-19 07:42:03,950] [44] 172.28.0.1 requested http://localhost/dashboardINFO in __init__: My App Logger
+[2022-04-19 07:43:59,094] [44] 172.28.0.1 requested http://localhost/dashboardINFO in __init__: My App Logger
+[2022-04-19 07:43:59,119] [44] 172.28.0.1 requested http://localhost/dashboardINFO in __init__: My App Logger

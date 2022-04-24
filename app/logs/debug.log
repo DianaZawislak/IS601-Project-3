@@ -153,3 +153,11 @@
 2022-04-19 03:31:26,001 [DEBUG] mydebugs: Debug Logger
 2022-04-19 03:31:26,543 [DEBUG] mydebugs: Debug Logger
 2022-04-19 03:31:26,554 [DEBUG] mydebugs: Debug Logger
+2022-04-19 07:30:46,935 [DEBUG] mydebugs: Debug Logger
+2022-04-19 07:30:46,935 [INFO] mydebugs: My App Logger
+2022-04-19 07:30:46,937 [DEBUG] mydebugs: Debug Logger
+2022-04-19 07:42:03,948 [DEBUG] mydebugs: Debug Logger
+2022-04-19 07:42:03,948 [INFO] mydebugs: My App Logger
+2022-04-19 07:42:03,950 [DEBUG] mydebugs: Debug Logger
+2022-04-19 07:43:59,095 [DEBUG] mydebugs: Debug Logger
+2022-04-19 07:43:59,119 [DEBUG] mydebugs: Debug Logger
