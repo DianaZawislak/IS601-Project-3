@@ -31,3 +31,4 @@ I am using technologies and skills obtained in this and previous classes.
 This application allows us to convert CSV to be uploaded to SQL database. We are using Docker container to hold all necessary packages and interpreters as well as to deploy the app to live website.
 I used a blueprint of simple pages to be able to carry nav bar and other applicable things through every page without having to reenter code.
 Everything is constantly tested with pytest (CI/CD) and deployment is stopped if test shall not pass. 
+

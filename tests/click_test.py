@@ -1,10 +1,12 @@
+import logging
 import os
 
 from click.testing import CliRunner
 
-from app import create_log_folder, create_database
+from app import create_database
 
 runner = CliRunner()
+
 
 
 def test_create_log_folder():
@@ -14,6 +16,7 @@ def test_create_log_folder():
     logdir = os.path.join(root, '../app/logs')
     response = os.path.exists(logdir)
     assert response == True
+
 
 def test_create_database():
     response = runner.invoke(create_database)
