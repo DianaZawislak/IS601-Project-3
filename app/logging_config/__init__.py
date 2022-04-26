@@ -5,7 +5,8 @@ from logging.config import dictConfig
 import flask
 from flask import request, current_app
 
-from app.logging_config.log_formatters import RequestFormatter
+#from app.logging_config.log_formatters import RequestFormatter
+from app.logging_config.log_formatters import useractivities
 from app import config
 
 log_con = flask.Blueprint('log_con', __name__)
@@ -46,17 +47,24 @@ LOGGING_CONFIG = {
             'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
         },
 
+        'useractivities': {
+            '()': 'app.logging_config.log_formatters.useractivities',
+            'format': '[%(asctime)s] %(levelname)s METHOD: %(request_method)s '
+                      'FILENAME:%(filename)s FUNCTION NAME:%(funcName)s() LINE:%(lineno)s] '
+                      '%(message)s from %(remote_addr)s'
+}
+
     },
     'handlers': {
         'default': {
             'level': 'INFO',
-            'formatter': 'standard',
+            'formatter': 'useractivities',
             'class': 'logging.StreamHandler',
             'stream': 'ext://sys.stdout',  # Default is stderr
         },
         'file.handler': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'standard',
+            'formatter': 'useractivities',
             'filename': os.path.join(config.Config.LOG_DIR,'handler.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
