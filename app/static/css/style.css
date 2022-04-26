@@ -7,7 +7,7 @@ font-size: 100%;
     height: 100%;
     margin: 3px;
     background-attachment: fixed;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0.8);
     background-blend-mode: lighten;
 }
 
@@ -127,4 +127,19 @@ a {
 .input{
     background-color:#666;
     color: #FFF;
+}
+
+.pagination {
+    justify-content: center;
+
+
+}
+
+.btn-info {
+    background: #2bc20e !important;
+}
+
+.btn {
+    background: rgba(43, 194, 14, 0.7) !important;
+
 }
