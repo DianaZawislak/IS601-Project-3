@@ -1,13 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="row">
-        <article class="col-8 lh-lg fs-5">
-
-            <h1>Index Page</h1>
-            {{ lipsum (n=5, html=True, min=20, max=100) }}
+        <article class="col-9 lh-lg fs-5 mb-3">
+            <img src="{{ url_for('static', filename='images/mymusic.svg') }}"
+                         class="img-fluid mb-5" alt="myMusic" width="700"
+                         loading="lazy">
+            <h2>Music Cataloging Made Easy</h2>
+            <hr class="featurette-divider">
+            <p>
+                Organize your personal music library with ease by importing your catalog spreadsheet and letting the
+                myMusic engine take care of the rest. Our cataloging service will convert your CSV data to SQL, making
+                searching easier, faster and more versatile. Create an account or login to begin.
+            </p>
+            <hr class="featurette-divider">
         </article>
         {% if current_user.is_authenticated == false %}
-            <aside class="col-4">
+            <aside class="col-3">
                 <h2>Login</h2>
                 <form action="{{ url_for('auth.login') }}" method=post>
                     <dl>
