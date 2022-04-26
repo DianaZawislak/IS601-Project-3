@@ -8,6 +8,7 @@ from flask import Flask
 from flask_bootstrap import Bootstrap5
 from flask_wtf.csrf import CSRFProtect
 
+from app.cli import create_log_folder
 from app.auth import auth
 from app.auth import auth
 from app.cli import create_database
@@ -54,7 +55,7 @@ def create_app():
     app.context_processor(utility_text_processors)
     # add command function to cli commands
     app.cli.add_command(create_database)
-    app.cli.add_command(create_log_file)
+    app.cli.add_command(create_log_folder)
     db.init_app(app)
     api_v1_cors_config = {
     "methods": ["OPTIONS", "GET", "POST"],
