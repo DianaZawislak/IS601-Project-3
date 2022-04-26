@@ -17,4 +17,5 @@ class RequestFormatter(logging.Formatter):
             record.url = None
             record.remote_addr = None
 
+
         return super().format(record)
