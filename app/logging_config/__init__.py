@@ -5,7 +5,7 @@ from logging.config import dictConfig
 import flask
 from flask import request, current_app
 
-#from app.logging_config.log_formatters import RequestFormatter
+from app.logging_config.log_formatters import RequestFormatter
 from app import config
 
 log_con = flask.Blueprint('log_con', __name__)
@@ -49,7 +49,7 @@ LOGGING_CONFIG = {
     },
     'handlers': {
         'default': {
-            'level': 'DEBUG',
+            'level': 'INFO',
             'formatter': 'standard',
             'class': 'logging.StreamHandler',
             'stream': 'ext://sys.stdout',  # Default is stderr
@@ -114,17 +114,17 @@ LOGGING_CONFIG = {
     'loggers': {
         '': {  # root logger
             'handlers': ['default','file.handler'],
-            'level': 'DEBUG',
+            'level': 'INFO',
             'propagate': True
         },
         '__main__': {  # if __name__ == '__main__'
             'handlers': ['default','file.handler'],
-            'level': 'DEBUG',
+            'level': 'INFO',
             'propagate': True
         },
         'werkzeug': {  # if __name__ == '__main__'
             'handlers': ['file.handler.werkzeug'],
-            'level': 'DEBUG',
+            'level': 'INFO',
             'propagate': False
         },
         'sqlalchemy.engine': {  # if __name__ == '__main__'
@@ -134,12 +134,12 @@ LOGGING_CONFIG = {
         },
         'myApp': {  # if __name__ == '__main__'
             'handlers': ['file.handler.myapp'],
-            'level': 'DEBUG',
+            'level': 'INFO',
             'propagate': False
         },
         'myerrors': {  # if __name__ == '__main__'
             'handlers': ['file.handler.errors'],
-            'level': 'DEBUG',
+            'level': 'INFO',
             'propagate': False
         },
         'myrequests': {  # if __name__ == '__main__'
@@ -149,7 +149,7 @@ LOGGING_CONFIG = {
         },
         'mydebugs': {  # if __name__ == '__main__'
             'handlers': ['file.handler.debugs'],
-            'level': 'DEBUG',
+            'level': 'INFO',
             'propagate': False
         },
 

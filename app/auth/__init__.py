@@ -1,7 +1,6 @@
-from flask import Blueprint, render_template, redirect, url_for, flash,current_app
+from flask import Blueprint, render_template, redirect, url_for, flash, current_app, logging
 from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash
-
 from app.auth.decorators import admin_required
 from app.auth.forms import login_form, register_form, profile_form, security_form, user_edit_form
 from app.db import db
@@ -26,6 +25,7 @@ def register():
                 db.session.add(user)
                 db.session.commit()
             flash('Congratulations, you are now a registered user!', "success")
+            current_app.logger.info("New User" + user.email + "registered")
             return redirect(url_for('auth.login'), 302)
         else:
             flash('Already Registered')
@@ -169,3 +169,5 @@ def delete_user(user_id):
     db.session.commit()
     flash('User Deleted', 'success')
     return redirect(url_for('auth.browse_users'), 302)
+
+
