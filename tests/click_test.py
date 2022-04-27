@@ -3,7 +3,7 @@ import os
 
 from click.testing import CliRunner
 
-from app import create_database
+from app import create_database, create_log_folder
 
 runner = CliRunner()
 
