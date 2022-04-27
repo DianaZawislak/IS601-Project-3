@@ -5,7 +5,7 @@ from logging.config import dictConfig
 import flask
 from flask import request, current_app
 
-# from app.logging_config.log_formatters import RequestFormatter
+from app.logging_config.log_formatters import RequestFormatter
 from app.logging_config.log_formatters import useractivities
 from app import config
 
@@ -15,6 +15,10 @@ log_con = flask.Blueprint('log_con', __name__)
 # @log_con.before_app_request
 # def before_request_logging():
 
+
+def CSV_file_upload():
+    log=logging.getLogger("song_upload")
+    log.info("User Uploaded new songs CSV")
 
 @log_con.after_app_request
 def after_request_logging(response):
@@ -67,10 +71,10 @@ LOGGING_CONFIG = {
             'maxBytes': 10000000,
             'backupCount': 5,
         },
-        'file.handler.myapp': {
+        'file.handler.dianasapp': {
             'class': 'logging.handlers.RotatingFileHandler',
             'formatter': 'standard',
-            'filename': os.path.join(config.Config.LOG_DIR, 'myapp.log'),
+            'filename': os.path.join(config.Config.LOG_DIR, 'DianasApp.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
@@ -102,17 +106,19 @@ LOGGING_CONFIG = {
             'maxBytes': 10000000,
             'backupCount': 5,
         },
-        'file.handler.requests': {
-            'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'standard',
-            'filename': os.path.join(config.Config.LOG_DIR, 'requests.log'),
-            'maxBytes': 10000000,
-            'backupCount': 5,
-        },
+
         'file.handler.debugs': {
             'class': 'logging.handlers.RotatingFileHandler',
             'formatter': 'standard',
             'filename': os.path.join(config.Config.LOG_DIR, 'debugs.log'),
+            'maxBytes': 10000000,
+            'backupCount': 5,
+        },
+
+        'file.handler.song_uploads': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'formatter': 'standard',
+            'filename': os.path.join(config.Config.LOG_DIR, 'song_uploads.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
@@ -138,8 +144,8 @@ LOGGING_CONFIG = {
             'level': 'INFO',
             'propagate': False
         },
-        'myApp': {  # if __name__ == '__main__'
-            'handlers': ['file.handler.myapp'],
+        'dianasapp': {  # if __name__ == '__main__'
+            'handlers': ['file.handler.dianasapp'],
             'level': 'INFO',
             'propagate': False
         },
@@ -149,12 +155,18 @@ LOGGING_CONFIG = {
             'propagate': False
         },
         'myrequests': {  # if __name__ == '__main__'
-            'handlers': ['file.handler.requests'],
+            'handlers': ['file.handler.request'],
             'level': 'DEBUG',
             'propagate': False
         },
         'mydebugs': {  # if __name__ == '__main__'
             'handlers': ['file.handler.debugs'],
+            'level': 'INFO',
+            'propagate': False
+        },
+
+        'song_uploads': {  # if __name__ == '__main__'
+            'handlers': ['file.handler.song_uploads'],
             'level': 'INFO',
             'propagate': False
         },
