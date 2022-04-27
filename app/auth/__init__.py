@@ -32,6 +32,7 @@ def register():
             return redirect(url_for('auth.login'), 302)
     return render_template('register.html', form=form)
 
+
 @auth.route('/login', methods=['POST', 'GET'])
 def login():
     form = login_form()
@@ -48,8 +49,10 @@ def login():
             db.session.commit()
             login_user(user)
             flash("Welcome", 'success')
+            current_app.logger.info("Existing User" + user.email + "Logged In")
             return redirect(url_for('auth.dashboard'))
     return render_template('index.html', form=form)
+
 
 @auth.route("/logout")
 @login_required
@@ -60,8 +63,9 @@ def logout():
     db.session.add(user)
     db.session.commit()
     logout_user()
+    flash("You are now logged out", 'success')
+    current_app.logger.info(" Current User " + user.email + " Logged Out ")
     return redirect(url_for('auth.login'))
-
 
 
 @auth.route('/dashboard')
@@ -79,6 +83,7 @@ def edit_profile():
         db.session.add(current_user)
         db.session.commit()
         flash('You Successfully Updated your Profile', 'success')
+        current_app.logger.info("Existing User  " + user.email + "  Updated Profile")
         return redirect(url_for('auth.dashboard'))
     return render_template('profile_edit.html', form=form)
 
@@ -93,12 +98,12 @@ def edit_account():
         db.session.add(current_user)
         db.session.commit()
         flash('You Successfully Updated your Password or Email', 'success')
+        current_app.logger.info(" Current User  " + user.email + " Updated email or password")
         return redirect(url_for('auth.dashboard'))
     return render_template('manage_account.html', form=form)
 
 
-
-#You should probably move these to a new Blueprint to clean this up.  These functions below are for user management
+# You should probably move these to a new Blueprint to clean this up.  These functions below are for user management
 
 @auth.route('/users')
 @login_required
@@ -169,5 +174,3 @@ def delete_user(user_id):
     db.session.commit()
     flash('User Deleted', 'success')
     return redirect(url_for('auth.browse_users'), 302)
-
-
