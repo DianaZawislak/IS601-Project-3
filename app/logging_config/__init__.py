@@ -4,6 +4,7 @@ from logging.config import dictConfig
 
 import flask
 from flask import request, current_app
+from flask_login import current_user
 
 from app.logging_config.log_formatters import RequestFormatter
 from app.logging_config.log_formatters import useractivities
@@ -14,11 +15,12 @@ log_con = flask.Blueprint('log_con', __name__)
 
 # @log_con.before_app_request
 # def before_request_logging():
+#@log_con.after_app_request
 
+def after_request_song_upload():
+    log = logging.getLogger('song_uploads')
+    log.info(current_user.email + "  uploaded new songs")
 
-def CSV_file_upload():
-    log=logging.getLogger("song_upload")
-    log.info("User Uploaded new songs CSV")
 
 @log_con.after_app_request
 def after_request_logging(response):

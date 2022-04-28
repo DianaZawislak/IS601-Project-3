@@ -49,7 +49,7 @@ def login():
             db.session.commit()
             login_user(user)
             flash("Welcome", 'success')
-            current_app.logger.info("Existing User" + user.email + "Logged In")
+            current_app.logger.info("Existing User " + user.email + " Logged In")
             return redirect(url_for('auth.dashboard'))
     return render_template('index.html', form=form)
 
@@ -64,7 +64,7 @@ def logout():
     db.session.commit()
     logout_user()
     flash("You are now logged out", 'success')
-    #current_app.logger.info(" Current User " + user.email + " Logged Out ")
+    current_app.logger.info(" Current User " + user.email + " Logged Out ")
     return redirect(url_for('auth.login'))
 
 

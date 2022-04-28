@@ -8,6 +8,7 @@ from jinja2 import TemplateNotFound
 
 from app.db import db
 from app.db.models import Song
+from app.logging_config import after_request_song_upload
 from app.songs.forms import csv_upload
 from werkzeug.utils import secure_filename, redirect
 
@@ -45,7 +46,8 @@ def songs_upload():
 
         current_user.songs = list_of_songs
         db.session.commit()
-
+        after_request_song_upload()
+        # current_app.logger.info(user.email + " has uploaded " + filename)
         return redirect(url_for('songs.songs_browse'))
 
     try:
