@@ -1,7 +1,16 @@
 {% extends "base.html" %}
 <article>{% block content %}
+    <div class="row">
+    <div class="col-6">
     <h1>About This Project</h1>
-    <p class="col-7">This is Project 3 in Web Development Systems graduate class (IS-601) at NJIT with professor Keith Williams.<br>
 
+        <p class="fs-5">This is Project 3 in Web Development Systems graduate class (IS-601) at NJIT with professor Keith Williams.<br>
+        </p>
+    </div>
+
+        <div class="col-6"><img src="{{ url_for('static', filename='images/njit.jpeg') }}"
+                                class="img-fluid mb-5" alt="njit"
+                                loading="lazy"></div>
+    </div>
 {% endblock %}
 </article>
