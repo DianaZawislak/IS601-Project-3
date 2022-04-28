@@ -64,7 +64,7 @@ def logout():
     db.session.commit()
     logout_user()
     flash("You are now logged out", 'success')
-    current_app.logger.info(" Current User " + user.email + " Logged Out ")
+    #current_app.logger.info(" Current User " + user.email + " Logged Out ")
     return redirect(url_for('auth.login'))
 
 
