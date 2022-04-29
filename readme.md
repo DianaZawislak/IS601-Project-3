@@ -1,7 +1,6 @@
 # Project 3 IS-601
 
 [![Production Workflow 1](https://github.com/DianaZawislak/IS601-Project-3/actions/workflows/prod.yml/badge.svg)](https://github.com/DianaZawislak/IS601-Project-3/actions/workflows/prod.yml)
-[![Production Workflow 1](https://github.com/DianaZawislak/IS601-Project-3/actions/workflows/prod.yml/badge.svg)](https://github.com/DianaZawislak/IS601-Project-3/actions/workflows/prod.yml)
 
 * [Production Deployment](https://zaw3-prod.herokuapp.com/)
 
