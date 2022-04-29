@@ -9,6 +9,8 @@
 
 * [Developmental Deployment](https://zaw3-dev.herokuapp.com/)
 
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhttps%2F%2Fgithub.com%2FDianaZawislak%2Fproj3%2Fhit-counter&count_bg=%23E746CB&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 ![Last Commit](https://img.shields.io/github/last-commit/DianaZawislak/IS601-Project-3?style=plastic)
 ![Pull Requests](https://img.shields.io/github/issues-pr/DianaZawislak/IS601-Project-3?style=plastic)
 ![Contributors](https://img.shields.io/github/contributors/DianaZawislak/IS601-Project-3?style=plastic)
